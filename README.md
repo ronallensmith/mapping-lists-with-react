@@ -1,3 +1,7 @@
+# mapping-lists-with-react
+
+##### This is a simple example of passing a 'state' object as a prop to a child Component, then mapping it's data for display to the DOM.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

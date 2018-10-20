@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Employees from './Employees';
 
 class App extends Component {
+  state = {
+    employees: [
+      {firstName: 'Bob', lastName: 'Brown', position: 'Owner', id: 1},
+      {firstName: 'Richard', lastName: 'Nixon', position: 'Manager', id: 2},
+      {firstName: 'Ron', lastName: 'Smith', position: 'Software Engineer', id: 3}
+    ]
+  };
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>Employees</h1>
+        <Employees employees={this.state.employees} />
       </div>
     );
   }
