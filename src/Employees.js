@@ -1,23 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Employees extends Component {
-  render() {
-    const { employees } = this.props;
-    const employeeList = employees.map(employee => {
-      return (
-        <div className="employee" key={employee.id}>
-          <div>First Name: { employee.firstName }</div>
-          <div>Last Name: { employee.lastName }</div>
-          <div>Position: { employee.position }</div>
-        </div>
-      )
-    });
+const Employees = ({employees}) => {
+  const employeeList = employees.map(employee => {
     return (
-      <div className="employee-list">
-        { employeeList }
+      <div className="employee" key={employee.id}>
+        <div>{ employee.firstName } { employee.lastName } - { employee.position }</div>
       </div>
     )
-  }
-}
+  });
+
+  return (
+    <div className="employee-list">
+      { employeeList }
+    </div>
+  )
+};
 
 export default Employees;
